@@ -1,2 +1,2 @@
-worker: mine.py
+worker: minebot.py
 //python <bot-file>
