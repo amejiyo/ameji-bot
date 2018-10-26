@@ -10,7 +10,7 @@ from discord.voice_client import VoiceClient
 
 BOT_PREFIX = ("/")
 
-TOKEN = BOT_TOKEN
+TOKEN = "BOT_TOKEN"
 
 client = Bot(command_prefix=BOT_PREFIX)
 
