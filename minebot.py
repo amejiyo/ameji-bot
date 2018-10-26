@@ -1,7 +1,7 @@
 import discord
 
 client = discord.Client()
-TOKEN = "NTAzODE4MjQzODA3NjQxNjIy.Dq8-ww.MiviRJBbYt30IF8gBhQ0uag75cE"
+TOKEN = BOT_TOKEN
 @client.event
 async def on_message(message):
     # we do not want the bot to reply to itself
