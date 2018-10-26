@@ -1,0 +1,11 @@
+{
+  "name": "Test",
+  "description": "Test",
+  "version": "0.0.0",
+  "main": "minebot.py",
+  "scripts": {
+      "start": "python minebot.py"
+      },
+   "main": "mybot.py",
+   "script": {
+      "start": "python mybot.py"
