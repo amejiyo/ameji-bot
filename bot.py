@@ -5,7 +5,7 @@ import asyncio
 import os
 
 client = discord.Client()
-api = str(os.environ.get('RIOT_KEY'))
+
 
 BOT_PREFIX = ("/")
 client = Bot(command_prefix=BOT_PREFIX)
