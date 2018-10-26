@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
+import asyncio
+import os
 
 client = discord.Client()
 
@@ -16,5 +18,4 @@ async def ping(ctx):
         await client.say("pong")
 
 
-client.run(BOT_TOKEN)
-bot.run(BOT_TOKEN)
+bot.run(os.environ['BOT_TOKEN'])
