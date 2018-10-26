@@ -1,3 +1,3 @@
-worker: node mybot.py
-worker: node mybot.py
-//node <bot-file>
+worker: python mybot.py
+worker: python mybot.py
+//python <bot-file>
