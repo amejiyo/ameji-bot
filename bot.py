@@ -8,10 +8,10 @@ import logging
 from discord.ext.commands import Bot
 from discord.voice_client import VoiceClient
 
-BOT_PREFIX = ("/")
+client = discord.Client()
 
 client = Bot(command_prefix=BOT_PREFIX)
-client = discord.Client()
+BOT_PREFIX = ("/")
 
 #voice command
 
