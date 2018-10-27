@@ -5,7 +5,7 @@ import os
 
 
 #GIVE YOUR BOT A PREFIX; mine is a.
-bot = commands.Bot(command_prefix="a.")
+bot = commands.Bot(command_prefix="/")
 
 
 
