@@ -1,4 +1,4 @@
-worker: python mybot.py
+worker: python mybot.py & minebot.py & wait -n
 
 
 #python <bot-file>
