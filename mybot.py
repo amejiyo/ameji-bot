@@ -7,6 +7,7 @@ from discord.ext import commands
 import logging
 from discord.ext.commands import Bot
 from discord.voice_client import VoiceClient
+import os
 
 BOT_PREFIX = ("/")
 
