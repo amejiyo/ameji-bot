@@ -10,8 +10,6 @@ from discord.voice_client import VoiceClient
 
 BOT_PREFIX = ("/")
 
-TOKEN = "BOT_TOKEN"
-
 client = Bot(command_prefix=BOT_PREFIX)
 
 newUserDMMessage = "Welcome to LOUDHOUSE"
@@ -88,5 +86,5 @@ async def list_servers():
 
 client.loop.create_task(list_servers())
 
-client.run(TOKEN)
-bot.run(TOKEN)
+
+bot.run(os.environ['BOT_TOKEN'])
