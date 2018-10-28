@@ -30,9 +30,9 @@ async def eight_ball(context):
     possible_responses = [
         'That is a resounding no',
         'It is not looking likely',
-        'Too hard to tell'''
-        'It is quite possible'''
-        '"Definitely'
+        'Too hard to tell',
+        'It is quite possible',
+        'Definitely'
     ]
     await client.say(random.choice(possible_responses) + "," + context.message.author.mention)
 
@@ -45,20 +45,20 @@ async def eight_ball(context):
 async def eight_ball(context):
     possible_responses = [
         'That is a resounding no',
-        'You look as pretty as always',
+        'as pretty as always',
         'Too hard to tell',
-        'You are very beautiful',
+        'very beautiful',
         'So ugly',
-        'I think you are very attractive',
-        'Wow, you are gorgeous',
-        'I think you are stunning!',
-        'I think you are super cute',
-        'You are beyond gorgeous',
+        'very attractive',
+        'Wow, so gorgeous',
+        'such a stunning person!',
+        'super cute!',
+        'beyond gorgeous',
         'Your beauty is incomparable',
-        'You look like an angel',
+        'like an angel',
         'At least your hair is nice!',
         'It looks like someone lit a FIRE on your face and put it out with a pitch fork and a golf shoe!',
-        'I was feeling sorry for myself....until I saw you',
+        'I was feeling sorry for myself....until I saw ...',
     ]
     await client.say(random.choice(possible_responses) + "," + context.message.author.mention)
 
