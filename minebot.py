@@ -16,7 +16,7 @@ async def on_message(message):
         await client.send_message(message.channel, "Ameji is beautiful girl")
     if message.content.startswith('/yemo'):
         await client.send_message(message.channel, 'The old man?')
-        msg = await client.wait_for_message(author=message.author, content='oops')
+        msg = await client.wait_for_message(author=message.author, content=['oops','Opps','meh', 'Mehh', 'Meh','Oops'])
         await client.send_message(message.channel, ';P')
     if message.content.startswith('/rule'):
         msg = "Faction rules: \n 1. Prob and audit only target faction or serve faction. \n2. Weekly credit must be more than 1000 per week. \n3. Respond to higher-ups at 7:30-8:30. \n4. Don't  be offline continuously 3 days (or more than). \nIf you are busy or want any excuse contact elites, home secretary, deputy, diplomat \n\nThe punishment \nkick"
