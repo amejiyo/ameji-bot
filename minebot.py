@@ -8,7 +8,6 @@ async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
         return
-
     if message.content.startswith('/hello'):
         msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
@@ -33,10 +32,19 @@ async def on_message(message):
     if message.content.startswith('/approve'):
         msg = "Thanks for applying to this faction. Before I approved you, I would like to introduce you LOUDHOUSE's rules. Please probe and audit only target faction or serve faction (a Chinese name), and do the guild's quest. \n\nPlease reply to this mail as confirmation.\n\nBest regard,\nAmeji."
         await client.send_message(message.channel, msg)
-#waifu
-@client.event
-async def on_message(message):
-        if message.content.startswith('/waifu'):
+    #waifu
+     possible_responses = [
+        'Error 404: not found',
+        'Between a trash and you, I will choose a trash.',
+        'I cant rate. You are incomparable.',
+        'No one is better than you.',
+        'Who dare to marry you?',
+        '50%',
+        'Give meimei a big red packet first',
+        'I am lazy now',
+        'Why do I need to rate you?'
+    ]
+    if message.content.startswith('/waifu'):
         await client.send_message(message.channel, 'You? ')
         def check(msg):
             return msg.content.startswith('{0.author.mention}'.format(message))
@@ -46,6 +54,8 @@ async def on_message(message):
         else:
             ans =  '{0.author.mention}'.format(message)
             await client.send_message(message.channel, random.choice(possible_responses) + ' ' + ans)
+
+
 
         
 @client.event
