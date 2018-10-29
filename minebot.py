@@ -33,6 +33,20 @@ async def on_message(message):
     if message.content.startswith('/approve'):
         msg = "Thanks for applying to this faction. Before I approved you, I would like to introduce you LOUDHOUSE's rules. Please probe and audit only target faction or serve faction (a Chinese name), and do the guild's quest. \n\nPlease reply to this mail as confirmation.\n\nBest regard,\nAmeji."
         await client.send_message(message.channel, msg)
+#waifu
+@client.event
+async def on_message(message):
+        if message.content.startswith('/waifu'):
+        await client.send_message(message.channel, 'You? ')
+        def check(msg):
+            return msg.content.startswith('{0.author.mention}'.format(message))
+        message = await client.wait_for_message(author=message.author, check=check)
+        if message.author.id == ameji:
+            await client.send_message(message.channel, '100% my beloved lord.')
+        else:
+            ans =  '{0.author.mention}'.format(message)
+            await client.send_message(message.channel, random.choice(possible_responses) + ' ' + ans)
+
         
 @client.event
 async def on_member_join(member):
