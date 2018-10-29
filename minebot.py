@@ -30,12 +30,16 @@ async def on_message(message):
             return msg.content.startswith('{0.author.mention}'.format(message))
         message = await client.wait_for_message(author=message.author, check=check)
         await client.send_message(message.channel, '{0.author.mention} is cool indeed'.format(message))
-
+    if message.content.startswith('/approve'):
+        msg = "Thanks for applying to this faction. Before I approved you, I would like to introduce you LOUDHOUSE's rules. Please probe and audit only target faction or serve faction (a Chinese name), and do the guild's quest. \n\nPlease reply to this mail as confirmation.\n\nBest regard,\nAmeji."
+        await c,client.send_message(message.channel, msg)
+        
 @client.event
 async def on_member_join(member):
     server = member.server
+    channel = member.server.get_channel("CHANNEL_ID")
     fmt = 'Welcome {0.mention} to {1.name}!'
-    await client.send_message(server, fmt.format(member, server))
+    await client.send_message(channel, fmt.format(member, server))
 
 @client.event
 async def on_ready():
