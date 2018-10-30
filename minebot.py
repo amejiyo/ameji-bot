@@ -4,7 +4,7 @@ import requests
 import asyncio
 from discord import Game
 from discord.ext import commands
-import logging
+import loggin
 from discord.ext.commands import Bot
 import os
 
@@ -44,7 +44,7 @@ async def on_message(message):
         def check(msg):
             return msg.content.startswith('{0.author.mention}'.format(message))
         message = await client.wait_for_message(author=message.author, check=check)
-        if message.author.id == os.environ('ameji'):
+        if message.author.id == 'ameji':
             await client.send_message(message.channel, '100% my beloved lord.')
         else:
             possible_responses = [
