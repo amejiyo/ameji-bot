@@ -2,7 +2,6 @@ import discord
 import os
 
 client = discord.Client()
-TOKEN = "BOT_TOKEN"
 @client.event
 async def on_message(message):
     # we do not want the bot to reply to itself
@@ -38,7 +37,7 @@ async def on_message(message):
         def check(msg):
             return msg.content.startswith('{0.author.mention}'.format(message))
         message = await client.wait_for_message(author=message.author, check=check)
-        if message.author.id == ameji:
+        if message.author.id == 'ameji':
             await client.send_message(message.channel, '100% my beloved lord.')
         else:
             possible_responses = [
