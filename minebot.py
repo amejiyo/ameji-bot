@@ -45,6 +45,8 @@ async def on_message(message):
         message = await client.wait_for_message(author=message.author, check=check)
         if message.author.id == os.environ['ameji']:
             await client.send_message(message.channel, '100% my beloved lord.')
+        if message.author.id == os.environ['rein']:
+            await client.send_message(message.channel, 'Love you, {0.author.mention}.'.format(message)) 
         else:
             possible_responses = [
                 'Error 404: not found',
