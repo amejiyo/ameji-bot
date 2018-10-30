@@ -40,26 +40,30 @@ async def on_message(message):
     #waifu
     if message.content.startswith('/waifu'):
         await client.send_message(message.channel, 'You? ')
+
         def check(msg):
             return msg.content.startswith('{0.author.mention}'.format(message))
-        message = await client.wait_for_message(author=message.author, check=check)
-        if message.author.id == os.environ['ameji']:
-            await client.send_message(message.channel, '100% my beloved lord.')
-        if message.author.id == os.environ['rein']:
-            await client.send_message(message.channel, 'Love you, {0.author.mention}.'.format(message)) 
+
+        message = await client.wait_for_message(author=message.author)
+        ameji = 'Ameji'
+        ameji = 'ameji'
+        if message.author.id == ameji:
+            await client.send_message(message.channel, '100% for my beloved lord.')
+        if message.content == ameji:
+            await client.send_message(message.channel, '100% for my lovely lord')
         else:
-            possible_responses = [
-                'Error 404: not found',
-                'Between a trash and you, I will choose a trash.',
-                'I cant rate. You are incomparable.',
-                'No one is better than you.',
-                'Who dare to marry you?',
-                '50%',
-                'Give meimei a big red packet first',
-                'I am lazy now',
-                'Why do I need to rate you?'
-                ]
-            ans =  '{0.author.mention}'.format(message)
+            ans = '{0.author.mention}'.format(message)
+                possible_responses = [
+        'Error 404: not found',
+        'Between a trash and you, I will choose a trash.',
+        'I cant rate. You are incomparable.',
+        'No one is better than you.',
+        'Who dare to marry you?',
+        '50%',
+        'Give meimei a big red packet first',
+        'I am lazy now',
+        'Why do I need to rate you?'
+    ]
             await client.send_message(message.channel, random.choice(possible_responses) + ' ' + ans)
 
 
