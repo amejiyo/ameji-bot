@@ -54,16 +54,16 @@ async def on_message(message):
         else:
             ans = '{0.author.mention}'.format(message)
                 possible_responses = [
-        'Error 404: not found',
-        'Between a trash and you, I will choose a trash.',
-        'I cant rate. You are incomparable.',
-        'No one is better than you.',
-        'Who dare to marry you?',
-        '50%',
-        'Give meimei a big red packet first',
-        'I am lazy now',
-        'Why do I need to rate you?'
-    ]
+                  'Error 404: not found',
+                  'Between a trash and you, I will choose a trash.',
+                  'I cant rate. You are incomparable.',
+                  'No one is better than you.',
+                  'Who dare to marry you?',
+                  '50%',
+                  'Give meimei a big red packet first',
+                  'I am lazy now',
+                  'Why do I need to rate you?'
+                   ]
             await client.send_message(message.channel, random.choice(possible_responses) + ' ' + ans)
 
 
