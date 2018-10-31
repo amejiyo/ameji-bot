@@ -46,14 +46,16 @@ async def on_message(message):
             return msg.content.startswith('{0.author.mention}'.format(message))
         message = await client.wait_for_message(author=message.author)
 
-        if message.content == 'ameji':
-            await client.send_message(message.channel, '100% for my lovely lord')
-        if message.author.id == os.environ['ameji']:
-            await client.send_message(message.channel, '100% my beloved lord.')
-        if message.author.id == os.environ['rein']:
-            await client.send_message(message.channel, 'Love you, {0.author.mention}.'.format(message)) 
-        else:
-            possible_responses = [
+        if message.author.id == ameji:
+            await client.send_message(message.channel, '100% for my beloved lord.')
+        if message.author.id != ameji:
+            me = 'Ameji'
+            me = ameji
+            me = 'ameji'
+            if message.content == me:
+                await client.send_message(message.channel, '100% for my lovely lord')
+            else:
+                 possible_responses = [
                 'Error 404: not found',
                 'Between a trash and you, I will choose a trash.',
                 'I cant rate. You are incomparable.',
@@ -64,10 +66,8 @@ async def on_message(message):
                 'I am lazy now',
                 'Why do I need to rate you?'
                 ]
-            ans =  '{0.author.mention}'.format(message)
-            await client.send_message(message.channel, random.choice(possible_responses) + ' ' + ans)
-
-
+                ans = '{0.author.mention}'.format(message)
+                await client.send_message(message.channel, random.choice(possible_responses) + ' ' + ans)
 
         
 @client.event
