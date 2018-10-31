@@ -46,7 +46,7 @@ async def on_message(message):
             return msg.content.startswith('{0.author.mention}'.format(message))
         message = await client.wait_for_message(author=message.author)
 
-        if message.content == ameji:
+        if message.content == 'ameji':
             await client.send_message(message.channel, '100% for my lovely lord')
         if message.author.id == os.environ['ameji']:
             await client.send_message(message.channel, '100% my beloved lord.')
