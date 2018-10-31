@@ -40,7 +40,7 @@ async def on_message(message):
     #waifu
     if message.content.startswith('/waifu'):
         await client.send_message(message.channel, 'You? ')
-        def check(msg)
+        def check(msg):
             return msg.content.startswith('{0.author.mention}'.format(message))
         message = await client.wait_for_message(author=message.author)
             ameji = 'Ameji'
