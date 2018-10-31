@@ -6,6 +6,8 @@ from discord import Game
 from discord.ext import commands
 from discord.ext.commands import Bot
 import os
+os.environ['ameji'] = 'Ameji'
+os.environ['ameji'] = 'ameji'
 
 client = discord.Client()
 @client.event
@@ -43,8 +45,7 @@ async def on_message(message):
         def check(msg):
             return msg.content.startswith('{0.author.mention}'.format(message))
         message = await client.wait_for_message(author=message.author)
-            os.environ['ameji'] = 'Ameji'
-            ps.environ['ameji'] = 'ameji'
+
         if message.content == ameji:
             await client.send_message(message.channel, '100% for my lovely lord')
         if message.author.id == os.environ['ameji']:
