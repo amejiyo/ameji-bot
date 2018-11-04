@@ -69,8 +69,8 @@ async def on_message(message):
 @client.event
 async def on_member_join(member):
     server = member.server
-    channel = member.server.get_channel("CHANNEL_ID")
-    fmt = 'Welcome {0.mention} to {1.name}!'
+    channel = member.server.get_channel(os.environ['CHANNEL_ID'])
+    fmt = 'Welcome {0.mention} to {1.name}, please read the message at new-member-discord-guide and enjoy your stay.'
     await client.send_message(channel, fmt.format(member, server))
 
 @client.event
