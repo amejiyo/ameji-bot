@@ -25,7 +25,7 @@ async def on_message(message):
         msg = await client.wait_for_message(author=message.author, content=['oops','Opps','meh', 'Mehh', 'Meh','Oops'])
         await client.send_message(message.channel, ';P')
     if message.content.startswith('/rule'):
-        msg = "Faction rules: \n 1. Prob and audit only target faction or serve faction. \n2. Weekly credit must be more than 1000 per week. \n3. Respond to higher-ups at 7:30-8:30. \n4. Don't  be offline continuously 3 days (or more than). \nIf you are busy or want any excuse contact elites, home secretary, deputy, diplomat \n\nThe punishment \nkick"
+        msg = "Faction rules: \n 1. Prob and audit only target faction or serve faction. \n2. Weekly credit must be more than 1000 per week. \n3. Respond to higher-ups at 7:30-8:30. \n4. Don't  be offline continuously 3 days (or more than).\n5. Don't snipe other players. We have a schedule. If you want a date plz book it in #dating-schedule .\n If you are busy or want any excuse contact elites, home secretary, deputy, diplomat \n\nThe punishment \nkick"
         await client.send_message(message.channel, msg)
     elif message.content.startswith('/bug'):
         await client.send_message(message.channel, 'Please contact ameji')
