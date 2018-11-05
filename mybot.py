@@ -91,7 +91,12 @@ async def list_servers():
             print(server.name)
         break
         await asyncio.sleep(6)
+@client.event
+async def on_ready():
+    await client.change_presence(game=Game(name="Any error tells ameji"))
+    print("Logged in as " + client.user.name)
 
+        
 client.loop.create_task(list_servers())
 
 client.run(os.environ['BOT_TOKEN'])
