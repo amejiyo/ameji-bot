@@ -68,7 +68,11 @@ async def on_message(message):
             ans = '{0.author.mention}'.format(message)
             await client.send_message(message.channel, random.choice(possible_responses) + ' ' + ans)
 
-        
+@client.event
+async def on_ready():
+    await client.change_presence(game=Game(name="Any error tell ameji"))
+    print("Logged in as " + client.user.name)
+      
 @client.event
 async def on_member_join(member):
     server = member.server
