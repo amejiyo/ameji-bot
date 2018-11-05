@@ -13,9 +13,6 @@ BOT_PREFIX = ("/")
 
 client = Bot(command_prefix=BOT_PREFIX)
 
-newUserDMMessage = "Welcome to LOUDHOUSE"
-
-
 #voice command
 
 
@@ -67,10 +64,18 @@ async def square(number):
     square_value = int(number) * int(number)
     await client.say(str(number) + " squared is " + str(square_value))
 
-@client.event
-async def on_ready():
-    await client.change_presence(game=Game(name="Any error tell ameji"))
-    print("Logged in as " + client.user.name)
+@client.command(name= 'music',
+                description="Music bots helper.",
+                brief= 'music bot helper.')
+async def music(message):
+    if message == 'ayana':
+        await client.say("**Play song** \n=p 'song' and then choose the version.\n**Check the queue** \n=q \n**Delete the specific song**\n=m d 'SongNumber' \n**More information:** \n =help music")
+    if message == 'rythm':
+        await client.say("**Play song** \n!p 'song'\n**Check the queue**\n!q\n**Delete the specific song**\n!rm 'SongNumber' \n**More information:**\n!help")
+    if message == 'montaro':
+        await client.say("**Play song** \n~>play 'song' and then choose the version.\n**Check the queue**\n~>queue\n**Delete the specific song**\n~>remove 'SongNumber'\n*Better don't use her. Her code is long and hard.* ")
+
+
 
 @client.command()
 async def bitcoin():
