@@ -7,9 +7,6 @@ apiai
 bs4
 gspread
 oauth2client
-discord.py[voice] ~= 0.16.12
-youtube_dl == 2018.09.26
-colorlog ~= 3.1.0
-pynacl ~= 1.2.1
+
 git+https://github.com/Rapptz/discord.py@rewrite#egg=discord.py[voice]
 
