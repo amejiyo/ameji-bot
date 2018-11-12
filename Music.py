@@ -2,9 +2,6 @@ import asyncio
 import discord
 from discord.ext import commands
 
-BOT_PREFIX = ("/")
-TOKEN = "NTA0ODY0NTkwNzA2OTAwOTkz.Drazkw.v1sHx3P8N_81-91Y723BM7HoGBo"
-command_prefix=BOT_PREFIX
 
 if not discord.opus.is_loaded():
     # the 'opus' library here is opus.dll on windows
@@ -247,6 +244,4 @@ bot.add_cog(Music(bot))
 async def on_ready():
     print('Logged in as:\n{0} (ID: {0.id})'.format(bot.user))
 
-bot.run(TOKEN)
-
-#python discordbot/Music.py
+bot.run(os.environ['BOT_TOKEN'])
