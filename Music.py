@@ -6,7 +6,7 @@ from discord.ext import commands
 songs = asyncio.Queue()
 play_next_song = asyncio.Event()
 
-client = commands.Bot(command_prefix = '/')
+client = commands.Bot(command_prefix = '.')
 players ={}
 queues = {}
 
