@@ -7,5 +7,6 @@ apiai
 bs4
 gspread
 oauth2client
+youtube_dl
 git+https://github.com/Rapptz/discord.py@rewrite#egg=discord.py[voice]
 
